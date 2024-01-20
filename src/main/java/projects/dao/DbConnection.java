@@ -14,15 +14,15 @@ public class DbConnection {
 		private static String USER ="projects";
 		
 		public Connection getConnection() {
-			String url =String.format("jdbc:mysql://%s:%d/%s?user=%s&password=%s", HOST, PORT, SCHEMA, USER, PASSWORD);
+			String uri =String.format("jdbc:mysql://%s:%d/%s?user=%s&password=%s", HOST, PORT, SCHEMA, USER, PASSWORD);
 		
 		try {
-		Connection conn =DriverManager.getConnection(url);
+		Connection conn =DriverManager.getConnection(uri);
 		 System.out.println("Successfully obtained connection!");
 		 return conn;
 		} catch (SQLException e) {
-			System.out.println("Unable to get connection at" + url);
-			throw new DbException ("Unable to get connection at \" + url");
+			System.out.println("Unable to get connection at" + uri);
+			throw new DbException ("Unable to get connection at \" + uri");
 		}
 		
 	}
