@@ -10,7 +10,7 @@ CREATE TABLE project(
  estimated_hours DECIMAL (7,2),
  actual_hours DECIMAL (7,2),
  difficulty INT,
- note TEXT, 
+ notes TEXT, 
  PRIMARY KEY (project_id)
  
 );

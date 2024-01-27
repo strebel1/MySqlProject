@@ -13,7 +13,7 @@ public class DbConnection {
 		private static String SCHEMA ="projects";
 		private static String USER ="projects";
 		
-		public Connection getConnection() {
+		public static Connection getConnection() {
 			String uri =String.format("jdbc:mysql://%s:%d/%s?user=%s&password=%s", HOST, PORT, SCHEMA, USER, PASSWORD);
 		
 		try {
